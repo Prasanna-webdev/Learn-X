@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn-X</title>
+    <style>
+        body { margin: 0; background-color: #000; }
+        #bg {
+            cursor: pointer;
+            background-image: url('bgclose.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
+        #myDIV { color:chartreuse; background-color:inherit; border:none; font-size: larger; font-weight: bolder; padding-top:25%;}
+    </style>
+</head>
+<body>
+<div id="bg" onclick="bg()">
+
+</div>
+
+<script>
+// Preload the second image
+var secondImage = new Image();
+secondImage.src = "bgopen.png";
+
+function bg() {
+    // Change the background image
+    document.getElementById("bg").style.backgroundImage = "url(bgopen.png)";
+    
+    // Delay the redirection by 1 second (1000 milliseconds)
+    setTimeout(function () {
+        window.location.href = "https://learnx-bc819.web.app"; // Replace with the URL you want to redirect to
+    }, 500);
+}
+</script>
+
+</body>
+</html>
